@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E3C0A23FADD4EC7AA3E940 /* Pods_IP67_Swift4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD693722EC874970CF9E383 /* Pods_IP67_Swift4.framework */; };
 		585FA88F1FF883280052CCD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA88E1FF883280052CCD5 /* AppDelegate.swift */; };
 		585FA8911FF883280052CCD5 /* FormularioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8901FF883280052CCD5 /* FormularioViewController.swift */; };
 		585FA8941FF883280052CCD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585FA8921FF883280052CCD5 /* Main.storyboard */; };
@@ -18,9 +19,15 @@
 		585FA8AE1FF891A80052CCD5 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8AD1FF891A80052CCD5 /* Contato.swift */; };
 		585FA8B11FF892780052CCD5 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8B01FF892780052CCD5 /* ContatoDao.swift */; };
 		585FA8B41FF89D830052CCD5 /* ContatoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8B31FF89D830052CCD5 /* ContatoDelegate.swift */; };
+		58AA4AB41FF8C1D7006D3CBF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 58AA4AB31FF8C1D7006D3CBF /* Podfile */; };
+		58AA4AB71FF8C563006D3CBF /* ClimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AA4AB61FF8C563006D3CBF /* ClimaViewController.swift */; };
+		58AA4ABA1FF8C931006D3CBF /* ActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AA4AB91FF8C931006D3CBF /* ActionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1232599302C5C4BD2E2A2E1C /* Pods-IP67-Swift4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IP67-Swift4.release.xcconfig"; path = "Pods/Target Support Files/Pods-IP67-Swift4/Pods-IP67-Swift4.release.xcconfig"; sourceTree = "<group>"; };
+		34B19691795FD160893894BC /* Pods-IP67-Swift4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IP67-Swift4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IP67-Swift4/Pods-IP67-Swift4.debug.xcconfig"; sourceTree = "<group>"; };
+		3FD693722EC874970CF9E383 /* Pods_IP67_Swift4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IP67_Swift4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		585FA88B1FF883280052CCD5 /* IP67-Swift4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IP67-Swift4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		585FA88E1FF883280052CCD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		585FA8901FF883280052CCD5 /* FormularioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,9 @@
 		585FA8AD1FF891A80052CCD5 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 		585FA8B01FF892780052CCD5 /* ContatoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		585FA8B31FF89D830052CCD5 /* ContatoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDelegate.swift; sourceTree = "<group>"; };
+		58AA4AB31FF8C1D7006D3CBF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		58AA4AB61FF8C563006D3CBF /* ClimaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaViewController.swift; sourceTree = "<group>"; };
+		58AA4AB91FF8C931006D3CBF /* ActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E3C0A23FADD4EC7AA3E940 /* Pods_IP67_Swift4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +61,11 @@
 		585FA8821FF883280052CCD5 = {
 			isa = PBXGroup;
 			children = (
+				58AA4AB31FF8C1D7006D3CBF /* Podfile */,
 				585FA88D1FF883280052CCD5 /* IP67-Swift4 */,
 				585FA88C1FF883280052CCD5 /* Products */,
+				FB1984367A74D2C2DD7B4DFD /* Pods */,
+				E2BE8B6B07FED7FDF74312CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +121,8 @@
 		585FA8AB1FF891860052CCD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				58AA4AB81FF8C91B006D3CBF /* Gerenciador de Ações */,
+				58AA4AB51FF8C553006D3CBF /* Clima */,
 				585FA8A51FF890560052CCD5 /* Mapa */,
 				585FA8A41FF8904C0052CCD5 /* Listagem */,
 				585FA8A31FF890440052CCD5 /* Formulario */,
@@ -138,6 +154,40 @@
 			path = Protocolos;
 			sourceTree = "<group>";
 		};
+		58AA4AB51FF8C553006D3CBF /* Clima */ = {
+			isa = PBXGroup;
+			children = (
+				58AA4AB61FF8C563006D3CBF /* ClimaViewController.swift */,
+			);
+			path = Clima;
+			sourceTree = "<group>";
+		};
+		58AA4AB81FF8C91B006D3CBF /* Gerenciador de Ações */ = {
+			isa = PBXGroup;
+			children = (
+				58AA4AB91FF8C931006D3CBF /* ActionManager.swift */,
+			);
+			name = "Gerenciador de Ações";
+			path = "Ações Controller";
+			sourceTree = "<group>";
+		};
+		E2BE8B6B07FED7FDF74312CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FD693722EC874970CF9E383 /* Pods_IP67_Swift4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1984367A74D2C2DD7B4DFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34B19691795FD160893894BC /* Pods-IP67-Swift4.debug.xcconfig */,
+				1232599302C5C4BD2E2A2E1C /* Pods-IP67-Swift4.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 585FA8A01FF883280052CCD5 /* Build configuration list for PBXNativeTarget "IP67-Swift4" */;
 			buildPhases = (
+				52EB5905F0CF99338B3F96A3 /* [CP] Check Pods Manifest.lock */,
 				585FA8871FF883280052CCD5 /* Sources */,
 				585FA8881FF883280052CCD5 /* Frameworks */,
 				585FA8891FF883280052CCD5 /* Resources */,
+				BA10E0820D52572382848DA1 /* [CP] Embed Pods Frameworks */,
+				E6BD79E212FFAE1B1B585994 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,11 +252,66 @@
 			files = (
 				585FA89C1FF883280052CCD5 /* LaunchScreen.storyboard in Resources */,
 				585FA8991FF883280052CCD5 /* Assets.xcassets in Resources */,
+				58AA4AB41FF8C1D7006D3CBF /* Podfile in Resources */,
 				585FA8941FF883280052CCD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52EB5905F0CF99338B3F96A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IP67-Swift4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA10E0820D52572382848DA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IP67-Swift4/Pods-IP67-Swift4-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IP67-Swift4/Pods-IP67-Swift4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6BD79E212FFAE1B1B585994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IP67-Swift4/Pods-IP67-Swift4-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		585FA8871FF883280052CCD5 /* Sources */ = {
@@ -214,7 +322,9 @@
 				585FA8A71FF8906D0052CCD5 /* ListagemViewController.swift in Sources */,
 				585FA8911FF883280052CCD5 /* FormularioViewController.swift in Sources */,
 				585FA8B41FF89D830052CCD5 /* ContatoDelegate.swift in Sources */,
+				58AA4ABA1FF8C931006D3CBF /* ActionManager.swift in Sources */,
 				585FA8AA1FF8908E0052CCD5 /* MapaViewController.swift in Sources */,
+				58AA4AB71FF8C563006D3CBF /* ClimaViewController.swift in Sources */,
 				585FA8971FF883280052CCD5 /* IP67_Swift4.xcdatamodeld in Sources */,
 				585FA8B11FF892780052CCD5 /* ContatoDao.swift in Sources */,
 				585FA88F1FF883280052CCD5 /* AppDelegate.swift in Sources */,
@@ -352,6 +462,7 @@
 		};
 		585FA8A11FF883280052CCD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34B19691795FD160893894BC /* Pods-IP67-Swift4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +478,7 @@
 		};
 		585FA8A21FF883280052CCD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1232599302C5C4BD2E2A2E1C /* Pods-IP67-Swift4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

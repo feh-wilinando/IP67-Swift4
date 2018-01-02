@@ -18,12 +18,18 @@ class ListagemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTapTableViewController()
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        tabBarController?.tabBar.isHidden = false
+        
         tableView.reloadData()
     }
     
@@ -54,6 +60,35 @@ class ListagemViewController: UIViewController {
         }
         
         formulario.delegate = self
+        
+    }
+    
+    
+    
+    private func setupTapTableViewController(){
+        let tap = UILongPressGestureRecognizer(target: self, action: #selector(touchCell(sender:)))
+        
+        tableView.addGestureRecognizer(tap)
+    }
+    
+    
+    @objc func touchCell(sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == .began {
+            
+            let ponto = sender.location(in: tableView)
+            
+            guard let indexPath = tableView.indexPathForRow(at: ponto) else {
+                return
+            }
+            
+            guard let contato = dao.find(by: indexPath.row) else {
+                return
+            }
+            
+            ActionManager(showIn: self).showActions(of: contato)
+            
+        }
         
     }
 }

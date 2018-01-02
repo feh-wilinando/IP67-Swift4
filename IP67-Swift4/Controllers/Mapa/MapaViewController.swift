@@ -22,11 +22,16 @@ class MapaViewController: UIViewController {
         
         mapView.delegate = self
         
+        navigationItem.rightBarButtonItem = MKUserTrackingBarButtonItem(mapView: mapView)
+        
         setupLocationPermissions()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        tabBarController?.tabBar.isHidden = false
+        
         mapView.addAnnotations(dao.findAll())
     }
 

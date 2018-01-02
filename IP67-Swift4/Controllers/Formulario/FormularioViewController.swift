@@ -42,6 +42,10 @@ class FormularioViewController: UIViewController {
         
         isEditingMode = true
         
+        navigationItem.title = "Detalhes"
+        
+        tabBarController?.tabBar.isHidden = true
+        
         fillForm(from: contato)
         
         let editButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(save(_:)))
