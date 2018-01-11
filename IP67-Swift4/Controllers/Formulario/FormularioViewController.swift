@@ -136,7 +136,7 @@ class FormularioViewController: UIViewController {
                 self.getPhoto(by: .photoLibrary)
             }))
             
-            
+            present(alert, animated: true, completion: nil)
             
         }else {
             getPhoto(by: .photoLibrary)

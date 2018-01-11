@@ -45,16 +45,7 @@ class ActionManager {
     
     
     private func weather(_ contato: Contato) {
-        
-        guard let climaController = parentController.storyboard?.instantiateViewController(withIdentifier: "clima") as? ClimaViewController else {
-            return
-        }
-        
-        climaController.contato = contato
-        
-        
-        parentController.navigationController?.pushViewController(climaController, animated: true)
-        
+        parentController.performSegue(withIdentifier: ListaViewControllerSegue.clima.rawValue, sender: contato)
     }
     
     private func map(_ contato: Contato) {
@@ -62,7 +53,7 @@ class ActionManager {
             return
         }
         
-        guard let url = ("http://maps.google.com/maps?q=" + endereco).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        guard let url = "http://maps.google.com/maps?q=\(endereco)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             return
         }
         

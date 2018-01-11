@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+enum ListaViewControllerSegue: String {
+    case formulario = "formulario"
+    case clima = "clima"
+}
+
 class ListagemViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -55,15 +61,40 @@ class ListagemViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        guard let segueIdentifier = segue.identifier else {
+            return
+        }
+        
+        guard let identifier = ListaViewControllerSegue(rawValue: segueIdentifier) else {
+            return
+        }
+        
+        switch identifier {
+        case .clima:
+            handleClimaNavigation(for: segue, with: (sender as? Contato))
+        case .formulario:
+            handleFormNavigation(for: segue)        
+        }
+       
+        
+    }
+    
+    private func handleClimaNavigation(for segue: UIStoryboardSegue, with contato: Contato?){
+        guard let clima = segue.destination as? ClimaViewController else {
+            return
+        }
+        
+        clima.contato = contato
+        
+    }
+    
+    private func handleFormNavigation(for segue: UIStoryboardSegue){
         guard let formulario = segue.destination as? FormularioViewController else {
             return
         }
         
         formulario.delegate = self
-        
     }
-    
-    
     
     private func setupTapTableViewController(){
         let tap = UILongPressGestureRecognizer(target: self, action: #selector(touchCell(sender:)))
