@@ -51,7 +51,7 @@ extension MapaViewController: MKMapViewDelegate {
             return nil
         }
         
-        let pin = getPin(by: "pino", and: annotation)
+        let pin = getPin(by: "pino", and: annotation) as! MKPinAnnotationView
         
         pin.pinTintColor = .blue
         
@@ -77,12 +77,28 @@ extension MapaViewController: MKMapViewDelegate {
         return pin
     }
     
-    private func getPin(by id:String, and annotation: MKAnnotation) -> MKPinAnnotationView {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation else {
+            return
+        }
+        
+        var span = mapView.region.span
+       
+        span.latitudeDelta *= 0.5
+        span.longitudeDelta *= 0.5
+        
+        let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+    }
+    
+    private func getPin(by id:String, and annotation: MKAnnotation) -> MKAnnotationView {
         guard let _ = mapView.dequeueReusableAnnotationView(withIdentifier: id) else {
             return MKPinAnnotationView(annotation: annotation, reuseIdentifier: id)
         }
-        
-        return mapView.dequeueReusableAnnotationView(withIdentifier: id, for: annotation) as! MKPinAnnotationView
+                
+        return mapView.dequeueReusableAnnotationView(withIdentifier: id, for: annotation)
     }
     
 }

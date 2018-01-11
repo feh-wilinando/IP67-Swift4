@@ -11,9 +11,18 @@ import MapKit
 import CoreData
 
 class Contato: NSManagedObject, MKAnnotation {
+    
+    override var description: String {
+        return ""
+    }
+    
     var coordinate: CLLocationCoordinate2D {
         get {
-            return CLLocationCoordinate2D(latitude: latitude!.doubleValue, longitude: longitude!.doubleValue)
+            guard let latitude = latitude, let longitude = longitude else {
+                return kCLLocationCoordinate2DInvalid
+            }
+            
+            return CLLocationCoordinate2D(latitude: latitude.doubleValue, longitude: longitude.doubleValue)
         }
     }
     
