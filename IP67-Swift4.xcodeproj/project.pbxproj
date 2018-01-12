@@ -19,6 +19,7 @@
 		585FA8AE1FF891A80052CCD5 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8AD1FF891A80052CCD5 /* Contato.swift */; };
 		585FA8B11FF892780052CCD5 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8B01FF892780052CCD5 /* ContatoDao.swift */; };
 		585FA8B41FF89D830052CCD5 /* ContatoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FA8B31FF89D830052CCD5 /* ContatoDelegate.swift */; };
+		587757C420082D2C002E8844 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587757C320082D2C002E8844 /* Weather.swift */; };
 		58AA4AB41FF8C1D7006D3CBF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 58AA4AB31FF8C1D7006D3CBF /* Podfile */; };
 		58AA4AB71FF8C563006D3CBF /* ClimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AA4AB61FF8C563006D3CBF /* ClimaViewController.swift */; };
 		58AA4ABA1FF8C931006D3CBF /* ActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AA4AB91FF8C931006D3CBF /* ActionManager.swift */; };
@@ -41,6 +42,7 @@
 		585FA8AD1FF891A80052CCD5 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 		585FA8B01FF892780052CCD5 /* ContatoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		585FA8B31FF89D830052CCD5 /* ContatoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDelegate.swift; sourceTree = "<group>"; };
+		587757C320082D2C002E8844 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		58AA4AB31FF8C1D7006D3CBF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		58AA4AB61FF8C563006D3CBF /* ClimaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaViewController.swift; sourceTree = "<group>"; };
 		58AA4AB91FF8C931006D3CBF /* ActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionManager.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				585FA8AD1FF891A80052CCD5 /* Contato.swift */,
+				587757C320082D2C002E8844 /* Weather.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				585FA8AE1FF891A80052CCD5 /* Contato.swift in Sources */,
 				585FA8A71FF8906D0052CCD5 /* ListagemViewController.swift in Sources */,
 				585FA8911FF883280052CCD5 /* FormularioViewController.swift in Sources */,
+				587757C420082D2C002E8844 /* Weather.swift in Sources */,
 				585FA8B41FF89D830052CCD5 /* ContatoDelegate.swift in Sources */,
 				58AA4ABA1FF8C931006D3CBF /* ActionManager.swift in Sources */,
 				585FA8AA1FF8908E0052CCD5 /* MapaViewController.swift in Sources */,

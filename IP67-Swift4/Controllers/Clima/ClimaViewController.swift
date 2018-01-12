@@ -11,7 +11,7 @@ import UIKit
 class ClimaViewController: UIViewController {
 
     var contato: Contato?
-    
+//    http://api.openweathermap.org/data/2.5/weather?APPID=db6e4ee50071d663e42d3dcf8da8a3d6&units=metric&lat=-23.588806&lon=-46.631484
     private let URL_BASE = "http://api.openweathermap.org/data/2.5/weather"
     private let URL_BASE_IMAGE = "http://openweathermap.org/img/w/"
     
@@ -45,31 +45,25 @@ class ClimaViewController: UIViewController {
             return
         }
         
-        
         request(for: url) { (data) in
             
-            guard let json = try! JSONSerialization.jsonObject(with: data, options:[]) as? [String: AnyObject] else {
-                return
+            let decoder = JSONDecoder()
+            
+            do{
+               let weather =  try decoder.decode(JsonResponse.self, from: data).unwrapp()
+                
+                self.fetchImage(icon: weather.icon)
+                
+                self.condicaoLabel.text = weather.condition
+                self.temperaturaMinimaLabel.text = weather.temperature.min.description + "º"
+                self.temperaturaMaximaLabel.text = weather.temperature.max.description + "º"
+                
+                self.condicaoLabel.isHidden = false
+                self.temperaturaMaximaLabel.isHidden = false
+                self.temperaturaMinimaLabel.isHidden = false
+            }catch {
+                print(error.localizedDescription)
             }
-            
-            
-            let main = json["main"] as! [String:AnyObject]
-            let weather = json["weather"] as! [[String:AnyObject]]
-            let temp_min = main["temp_min"] as! Double
-            let temp_max = main["temp_max"] as! Double
-            let icon = weather[0]["icon"] as! String
-            let condicao = weather[0]["main"] as! String
-            
-            self.fetchImage(icon: icon)
-            
-            self.condicaoLabel.text = condicao
-            self.temperaturaMinimaLabel.text = temp_min.description + "º"
-            self.temperaturaMaximaLabel.text = temp_max.description + "º"
-        
-            self.condicaoLabel.isHidden = false
-            self.temperaturaMaximaLabel.isHidden = false
-            self.temperaturaMinimaLabel.isHidden = false
-            
         }
  
     }
